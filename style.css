@@ -26,8 +26,11 @@ h2 {
   font-weight: normal;
 }
 
-h1, h2, h3, nav {
-  font-family: "Saira Extra Condensed", sans-serif;
+h1,
+h2,
+h3,
+nav {
+  font-family: 'Saira Extra Condensed', sans-serif;
 }
 
 /* Responsive images */
@@ -48,7 +51,7 @@ section h2 {
   margin: 60px 0;
 }
 section h2:after {
-  content: "";
+  content: '';
   position: absolute;
   bottom: -20px;
   width: 60px;
@@ -63,6 +66,25 @@ header {
   background-color: rgba(37, 37, 37, 0.8);
 }
 
-/* 
- * YOUR CSS:
- */
+#about div {
+  display: flex;
+}
+
+#about p {
+  flex: 3;
+}
+
+#aboutmockup {
+  flex: 2;
+}
+
+#staff div {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 0 0 33%;
+  justify-content: center;
+}
+
+/* .staff-profile {
+  justify-content: center;
+} */
