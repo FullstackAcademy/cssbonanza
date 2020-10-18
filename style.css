@@ -9,6 +9,7 @@
 
 body {
   margin: 0;
+  width: 80%;
   font-family: Helvetica, Arial, sans-serif;
 }
 
@@ -66,25 +67,178 @@ header {
   background-color: rgba(37, 37, 37, 0.8);
 }
 
+#carousel-text {
+  color: white;
+  position: absolute;
+  top: 40%;
+  text-shadow: 1px 1px 0 black;
+  left: 30%;
+}
+
+#about {
+  margin-top: 0;
+  background-color: rgba(235, 230, 230, 0.849);
+}
+
 #about div {
   display: flex;
+  padding: 0 2rem;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 #about p {
+  font-size: 0.8rem;
+  display: flex;
   flex: 3;
 }
 
 #aboutmockup {
+  display: flex;
   flex: 2;
 }
 
-#staff div {
+#aboutmockup img {
+  max-width: 100%;
+}
+
+#staff > div {
   display: flex;
   flex-wrap: wrap;
-  flex: 0 0 33%;
   justify-content: center;
 }
 
-/* .staff-profile {
-  justify-content: center;
-} */
+.staff-profile {
+  display: flex;
+  flex: 0 0 33%;
+  padding: 2rem;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.staff-profile p {
+  font-style: italic;
+}
+
+header {
+  padding: 0.5rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  border-radius: 0 0 15px 15px;
+  position: fixed;
+  top: 0;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  width: calc(100% - 8rem);
+  z-index: 2;
+  justify-content: space-between;
+  background-color: rgba(37, 37, 37, 0.8);
+}
+
+nav {
+  display: flex;
+  flex: 3;
+  font-size: 1.3rem;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.nav-item a {
+  color: white;
+  height: 2.7rem;
+  margin: 0 1rem;
+  text-decoration: none;
+  transition: color 1s, background-color 2s;
+}
+
+.nav-item a:hover {
+  color: #202b47;
+  background-color: #fff;
+  box-shadow: #d3d3d3;
+}
+
+.logo {
+  flex: 1;
+  padding: 1rem;
+  margin-left: 1rem;
+}
+
+.logo img {
+  height: 1.5rem;
+  width: auto;
+}
+
+@media (min-width: 601px) and (max-width: 1000px) {
+  .staff-profile {
+    flex: 0 0 50%;
+  }
+
+  nav {
+    font-size: 0.75rem;
+  }
+
+  #carousel-text h1 {
+    font-size: 2rem;
+  }
+  #carousel-text h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* for screens up to 600px wide */
+
+@media (max-width: 600px) {
+  #carousel-text h1 {
+    font-size: 0.9rem;
+    text-shadow: 2px 2px black;
+  }
+  #carousel-text h2 {
+    font-size: 0.75rem;
+    text-shadow: 3px 3px black;
+  }
+
+  #about div {
+    flex-direction: column-reverse;
+    font-size: 0.75rem;
+    justify-content: center;
+    padding: 0.5rem;
+  }
+  section h2 {
+    margin: 0.5rem;
+  }
+  #about p {
+    padding: 0.5rem;
+    flex: 2.5;
+  }
+
+  nav {
+    padding: 0;
+    font-size: 1rem;
+  }
+
+  /* header {
+    height: 2.5rem;
+    font-size: 0.5rem;
+  } */
+  header {
+    flex-direction: column;
+    width: 100%;
+    border-radius: 0;
+    margin: 0;
+  }
+  .logo img {
+    height: 1rem;
+    width: auto;
+  }
+
+  #aboutmockup img {
+    width: 100%;
+    height: auto;
+    flex: 1.5;
+  }
+  .staff-profile {
+    flex: 0 0 90%;
+  }
+}
